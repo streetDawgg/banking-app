@@ -1,6 +1,6 @@
 # Java Banking App (CLI + Spring Boot REST API)
 
-Two Maven modules:
+Two Maven modules:(Three actually, GUI under Construction)
 
 | Module   | What it is |
 |----------|------------|
