@@ -1,6 +1,6 @@
-# Java Banking App (CLI + Spring Boot REST API)
+# Java Banking App (CLI + Spring Boot REST API + ReactJs)
 
-Two Maven modules:(Three actually, GUI under Construction)
+Two Maven modules:
 
 | Module   | What it is |
 |----------|------------|
@@ -33,7 +33,7 @@ If `₱` shows as `?` on Windows, run `chcp 65001` first.
 
 Register two users in separate CLI sessions to try transfers.
 
-## API
+## API(Tested in Postman !!--- I used token and Encryption ---!!)
 | Method | Endpoint | Notes |
 |--------|----------|-------|
 | POST | `/api/auth/register` | `{fullName, phoneNumber, pin}` |
