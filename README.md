@@ -1,4 +1,4 @@
-# Java Banking App (CLI + Spring Boot REST API + ReactJs)
+# Java Banking App (CLI + Spring Boot REST API + ReactJs + Vite)
 
 Two Maven modules:
 
@@ -10,6 +10,8 @@ Two Maven modules:
 ## Requirements
 - JDK 25 and Maven 3.9+
 - PostgreSQL (or Docker, see below)
+- ReactJS
+- NodeJS
 
 ## 1. Start PostgreSQL
 ```bash
@@ -30,6 +32,14 @@ mvn -q -pl cli compile exec:java
 ```
 Set `BANK_API_URL` if the server isn't on `http://localhost:8080`.
 If `₱` shows as `?` on Windows, run `chcp 65001` first.
+
+#### AFTER EXECUTING THE SERVER OPEN VS CODE ####
+
+```bash
+cd web
+npm install
+npm run dev        # http://localhost:5173 or whatever Localhost u want#
+```
 
 Register two users in separate CLI sessions to try transfers.
 
