@@ -195,7 +195,24 @@
 }
 
 
+.account-number-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
+.account-number-toggle {
+    background: transparent;
+    border: none;
+    color: #bfdbfe;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.account-number-toggle:hover {
+    color: #ffffff;
+}
 
 .dashboard-account-card {
     padding: 25px;

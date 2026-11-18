@@ -1,0 +1,172 @@
+
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #141b2d;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 18px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+    margin-bottom: 45px;
+}
+
+.sidebar-brand-icon {
+    width: 50px;
+    height: 50px;
+    background: #2563eb;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sidebar-brand-icon img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+.sidebar-brand h2 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 700;
+}
+
+
+.sidebar-label {
+    color: #8490a7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 0 12px;
+    margin-bottom: 15px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 13px 14px;
+    border-radius: 8px;
+
+    color: #aab4c8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: #222e46;
+    color: #ffffff;
+}
+
+
+.sidebar-link.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+.sidebar-icon {
+    width: 20px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1;
+}
+
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 25px;
+    border-top: 1px solid #29344a;
+}
+
+.sidebar-logout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 13px 14px;
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #fca5a5;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.sidebar-logout:hover {
+    background: #3b2633;
+    color: #fecaca;
+}
+
+
+@media (max-width: 650px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .sidebar-brand {
+        margin-bottom: 20px;
+    }
+
+    .sidebar-menu {
+        min-width: 0;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .sidebar-link {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .sidebar-footer {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+}
+
+

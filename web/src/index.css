@@ -325,6 +325,16 @@ button:disabled {
     font-size: 0.88rem;
 }
 
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.layout-content {
+    flex: 1;
+    min-width: 0;
+    background: #f4f6fb;
+}
 
 @media (max-width: 768px) {
 

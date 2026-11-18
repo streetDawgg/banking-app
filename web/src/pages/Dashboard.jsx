@@ -7,6 +7,7 @@ import '../styles/dashboard.css'
 
 export default function Dashboard() {
   const [account, setAccount] = useState(null)
+  const [showAccountNumber, setShowAccountNumber] = useState(false)
   const [recent, setRecent] = useState([])
   const [error, setError] = useState('')
   const [showBalance, setShowBalance] = useState(true)
@@ -33,8 +34,14 @@ export default function Dashboard() {
   }, [])
 
   // Mask account number, showing only the last 4 digits
-  const maskedAccount = account?.accountNumber
-    ? `---- ---- ${String(account.accountNumber).slice(-4)}`
+const accountNumber = account?.accountNumber
+  ? String(account.accountNumber)
+  : 'Not available'
+
+const displayedAccountNumber = showAccountNumber
+  ? accountNumber
+  : accountNumber !== 'Not available'
+    ? `•••• •••• ${accountNumber.slice(-4)}`
     : 'Not available'
 
   if (error) {
@@ -122,14 +129,32 @@ export default function Dashboard() {
           </h2>
 
           <div className="balance-card-bottom">
-            <div>
-              <p>ACCOUNT NUMBER</p>
-              <strong>{maskedAccount}</strong>
-            </div>
+<div className="balance-card-bottom">
+  <div>
+    <p>ACCOUNT NUMBER</p>
 
-            <div className="balance-card-brand">
-              MYBANK
-            </div>
+    <div className="account-number-display">
+      <strong>{displayedAccountNumber}</strong>
+
+      <button
+        type="button"
+        className="account-number-toggle"
+        onClick={() => setShowAccountNumber(prev => !prev)}
+        aria-label={
+          showAccountNumber
+            ? 'Hide account number'
+            : 'Show account number'
+        }
+      >
+        {showAccountNumber ? 'Hide' : 'Show'}
+      </button>
+    </div>
+  </div>
+
+  <div className="balance-card-brand">
+    MYBANK
+  </div>
+</div>
           </div>
 
         </div>
@@ -163,7 +188,7 @@ export default function Dashboard() {
 
             <div className="account-info-item">
               <span>Account Number</span>
-              <strong>{maskedAccount}</strong>
+              <strong>{displayedAccountNumber}</strong>
             </div>
 
           </div>
